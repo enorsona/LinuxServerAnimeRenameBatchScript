@@ -18,8 +18,8 @@ def entry():
     _l = os.listdir()
     for i in range(0, len(_l)):
         print('[' + str(i) + ']: ' + _l[i])
-    _input = input('请选择文件夹：')
-    os.chdir(os.getcwd() + '/' + _input)
+    _input = int(input('请选择文件夹：'))
+    os.chdir(os.getcwd() + '/' + _l[_input])
     print('当前文件夹为：' + os.getcwd())
     print('当前默认移动目标为：/shared/anime/')
     _path = '/shared/anime/'
